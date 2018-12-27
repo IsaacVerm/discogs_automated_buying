@@ -1,5 +1,6 @@
-from lib.spotify_requests import SpotifyRequests
+from lib.playlist_tracks import PlaylistTracks
 
 if __name__ == "__main__":
-    tracks = SpotifyRequests().get_playlist_tracks('Ontdekkingen')
-    print(tracks)
+    tracks = PlaylistTracks()
+    tracks.get_playlist_tracks('Ontdekkingen')
+    tracks.save_relevant_album_fields()
